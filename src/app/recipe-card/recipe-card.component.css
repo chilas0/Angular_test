@@ -1,0 +1,40 @@
+.principal-card {
+  margin: 2%;
+  max-width: 387px;
+  float: left;
+  background: #3B3C24;
+  justify-content: space-between;
+}
+
+.initial{
+  padding-top: 3%;
+  justify-content: center;
+}
+
+.header-card{
+  justify-content: center;
+  
+}
+
+.title-card{
+  color:#ffffff;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.description-card{
+  color: #ffffff;
+}
+
+.btn-card{
+  background-color: #D7DBE6;
+  border-radius: 15px;
+}
+
+.withoutData{
+  text-align: center;
+  padding-top: 100px;
+}

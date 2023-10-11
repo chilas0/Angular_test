@@ -1,0 +1,81 @@
+.chip-ingredients {
+  width: 100%;
+
+}
+
+.chip{
+  background-color: #467734 !important;
+}
+
+.mat-mdc-chip-action-label{
+  color: #FFFFFF !important;
+}
+
+.chip mdc-evolution-chip__text-label{
+  color: #FFFFFF !important;
+}
+input[type="file"] {
+  width: 200px;
+  height: 40px;
+  margin-bottom: 20px;
+  /* Esconde el input de tipo file */
+  display: none;
+}
+
+/* Estilo personalizado para el botón que abrirá el selector de archivo */
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #467734;
+  color: #faf3f3;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Establece un estilo para cuando se haga hover sobre el botón */
+.custom-file-upload:hover {
+  background-color: #6c975c;
+}
+
+.img {
+  width: 350px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.content {
+  padding-top: 10px;
+}
+
+.action {
+  padding: 0px 25px 20px;
+  background-color: #DBDFF0;
+}
+
+button {
+  flex: 1;
+}
+
+.card{
+  background-color: #DBDFF0;
+  justify-content: center;
+}
+
+.form-card {
+  margin: 2%;
+  max-width: 387px;
+  background: #3B3C24;
+}
+
+.form{
+  background-color: #DBDFF0;
+}
+.title-form{
+  background-color: #DBDFF0;
+}

@@ -1,0 +1,49 @@
+<div mat-dialog-title class="title-form">Recipe Form</div>
+<form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content form">
+        <div class="row">
+            <mat-form-field class="col-12" appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title">
+            </mat-form-field>
+    
+            <mat-form-field class="col-12" appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea  matInput formControlName="description"></textarea>
+            </mat-form-field>
+    
+            <div class="col-12">
+                 <label for="file-upload" class="custom-file-upload"> Select your image</label>
+                <input  formControlName="image" type="file" class="custom-file-input" (change)="onImageSelected($event)" id="file-upload"  appearance="outline">
+                
+            </div>
+            <div class="row card">
+                <mat-card class="form-card" *ngIf="preview">
+                    <img mat-card-image  [src]="preview" alt="" >
+                </mat-card>
+            </div>
+    
+            <p><em>Enter your ingredients</em></p>
+            <mat-form-field class="chip-ingredients col-12" appearance="outline" >
+                <mat-label>  Ingredients</mat-label>
+                <mat-chip-grid #chipGrid aria-label="Enter keywords"  >
+                    <mat-chip-row *ngFor="let keyword of keywords" class="chip" (removed)="removeKeyword(keyword)" formArrayName="ingredients">
+                        {{keyword}}
+                        <button matChipRemove aria-label="'remove ' + keyword">
+                            <mat-icon>cancel</mat-icon>
+                        </button>
+                    </mat-chip-row>
+                </mat-chip-grid>
+                <input placeholder="New ingredient..."
+                        [matChipInputFor]="chipGrid"
+                        (matChipInputTokenEnd)="add($event)" />
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button  color="warn" type="button" [mat-dialog-close]><mat-icon>cancel</mat-icon>Cancel</button>
+        <button mat-raised-button  color="primary"><mat-icon>save</mat-icon>Save</button>
+    </div>
+</form>
+
+

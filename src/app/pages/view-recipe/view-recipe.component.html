@@ -1,0 +1,40 @@
+
+<mat-toolbar class="toolbarFirst">
+  <mat-toolbar-row>
+    <span class="icon">Test Angular</span>
+    <span class="spacer"></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<section>
+  <div class="container" *ngIf="recipe">
+    <div class="row">
+      <h1>{{ recipe.title }}</h1>
+    </div>
+    <hr>
+    <div class="row initial">
+      <mat-card class="detail-card">
+        <img mat-card-image  src="{{recipe.image}}" alt="" >
+      </mat-card>
+    </div>
+    <hr>
+    <div class="row description">
+      <div class="col-12">
+        <h2>Description</h2>
+        <p>{{recipe.description}}</p>
+      </div>
+    </div>
+      
+  
+    <div class="row ingredient">
+      <h3>Ingredients</h3>
+      <ul>
+        <li *ngFor="let ingredient of recipe.ingredients" >
+          <input type="checkbox" (change)="selected($event)">
+          <label for="" #element>  {{ ingredient }} </label>
+        </li>
+      </ul>
+    </div >
+  </div>
+</section>
+
+  

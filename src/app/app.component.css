@@ -1,0 +1,31 @@
+.spacer{
+    flex: 1 1 auto;
+  }
+
+  :host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.toolbarFirst{
+    background: #1D2C52;
+    height: 95px;
+}
+.icon{
+    color: #DACBCB;
+}
+
+.addButton{
+    border-radius: 15px;
+    padding-top: 3px;
+    background: #54CF28;
+}
+
+
+
+
+
+
+
+
